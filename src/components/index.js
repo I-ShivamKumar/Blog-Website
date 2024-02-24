@@ -12,20 +12,21 @@ import AuthLayout from "./AuthLayout";
 import Signup from "./Signup";
 import Login from "./Login";
 import PostForm from "./post-form/PostForm";
-
+import ProfileComponent from "./ProfileComponent";
 
 export {
     Container,
     Footer,
     Header,
+    LogoutBtn,
     PostForm,
     AuthLayout,
     Button,
     Input,
     Login,
-    LogoutBtn,
-    Logo,  
+    Logo,
     PostCard,
+    ProfileComponent,
     RTE,
     Select,
     Signup,

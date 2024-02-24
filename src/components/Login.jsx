@@ -15,6 +15,8 @@ function Login() {
 
     const [error, setError] = useState('');
 
+
+
     const login = async (data) => {
         setError('');
 
@@ -36,16 +38,16 @@ function Login() {
     }
 
     return (
-        <div className='flex items-center justify-center w-full'>
+        <div className='flex items-center justify-center w-full mt-[5vw] mb-[5vw]'>
 
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg bg-blue-300 rounded-xl p-10 border border-black/10`}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
-                <p className="mt-2 text-center text-base text-black/60">
+                <p className="mt-3 text-center text-base text-black/60">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
@@ -59,7 +61,7 @@ function Login() {
 
                 <form onSubmit={handleSubmit(login)} className='mt-8'>
 
-                    <div className="space-y-5">
+                    <div className="space-y-9">
 
                         <Input
                             label="Email"

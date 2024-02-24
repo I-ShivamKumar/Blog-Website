@@ -15,27 +15,25 @@ function App() {
   useEffect(() => {
     authService.getCurrentUser()
       .then((userData) => {
-        if (userData) {
-          dispatch(login({ userData }))
-        } else {
-          dispatch(logout())
-        }
+        if (userData) dispatch(login({ userData }))
+        else dispatch(logout())
       })
-      .finally(() => setLoading(false))
-  }, [])
+      .finally(() => setLoading(false));
+  }, []);
 
   return !loading ? (
-    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
-      <div className='w-full block'>
-        <Header />
-        <main>
-          <SpeedInsights />
-          <Outlet />
-        </main>
-        <Footer />
+    
+      <div className='min-h-screen flex flex-wrap content-between bg-black text-white'>
+        <div className='w-full block'>
+          <Header />
+          <main>
+            <SpeedInsights />
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
-  ) : null
+      ) : null
 }
 
 export default App
