@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 function ProfileComponent() {
     const userData = useSelector((state) => state.auth.userData);
 
-    console.log(userData);
+    // console.log(userData);
     return (
         <div className='my-10'>
             <h1 className='text-3xl font-bold text-center my-10'>Profile</h1>

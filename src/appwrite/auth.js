@@ -22,7 +22,7 @@ export class AuthService {
                 return userAccount
             }
         } catch (error) {
-            console.log("appwrite service :: authenticaion error:: createAccount", error);
+            // console.log("appwrite service :: authenticaion error:: createAccount", error);
             throw error;
         }
     }
@@ -32,7 +32,7 @@ export class AuthService {
             return await this.account.createEmailSession(email, password);
 
         } catch (error) {
-            console.log("appwrite service :: authenticaion error:: login", error);
+            // console.log("appwrite service :: authenticaion error:: login", error);
             throw error;
         }
     }
@@ -41,7 +41,7 @@ export class AuthService {
         try {
             return await this.account.get();
         } catch (error) {
-            console.log("appwrite service :: authenticaion error:: getCurrentuser", error);
+            // console.log("appwrite service :: authenticaion error:: getCurrentuser", error);
             
         }
         return null;
@@ -51,7 +51,7 @@ export class AuthService {
         try {
             return await this.account.deleteSessions();
         } catch (error) {
-            console.log("appwrite service :: authenticaion error:: logout", error);
+            // console.log("appwrite service :: authenticaion error:: logout", error);
         }
     }
 

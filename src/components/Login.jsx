@@ -5,6 +5,7 @@ import { Button, Input, Logo } from './index'
 import { useDispatch } from 'react-redux'
 import authService from '../appwrite/auth'
 import { useForm } from 'react-hook-form'
+import Loader from './Loader'
 
 function Login() {
 
@@ -14,11 +15,13 @@ function Login() {
     const { register, handleSubmit } = useForm();
 
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false)
 
 
 
     const login = async (data) => {
         setError('');
+        setLoading(true)
 
         try {
             const session = await authService.login(data);
@@ -34,20 +37,23 @@ function Login() {
         catch (error) {
             setError(error.message);
         }
+        finally {
+            setLoading(false)
+        }
 
     }
 
     return (
         <div className='flex items-center justify-center w-full mt-[5vw] mb-[5vw]'>
 
-            <div className={`mx-auto w-full max-w-lg bg-blue-300 rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg glass rounded-xl p-10 border `}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
-                <p className="mt-3 text-center text-base text-black/60">
+                <p className="mt-3 text-center text-base text-white/80">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
@@ -85,7 +91,13 @@ function Login() {
                             })}
                         />
 
-                        <Button type="submit" className="w-full" > Submit</Button>
+                        {loading ?
+                            <div className='w-full grid place-items-center'> <Loader></Loader></div>
+                            :
+                            <Button
+                                type="submit"
+                                className=" my-4 py-2 px-5 w-full text-black font-semibold button-custom rounded-xl shadow-lg   hover:cursor-pointer"
+                            >Sign in</Button>}
                     </div>
                 </form>
             </div>

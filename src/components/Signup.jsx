@@ -5,6 +5,7 @@ import { Button, Input, Logo } from './index'
 import { useDispatch } from 'react-redux'
 import { login } from '../store/authSlice'
 import { useForm } from 'react-hook-form'
+import Loader from './Loader'
 
 function Signup() {
 
@@ -12,8 +13,10 @@ function Signup() {
     const dispatch = useDispatch();
     const [error, seterror] = useState('')
     const { register, handleSubmit } = useForm();
+    const [loading, setLoading] = useState(false)
 
     const create = async (data) => {
+        setLoading(true)
         seterror('')
         try {
             const userData = await authService.createAccount(data)
@@ -24,18 +27,21 @@ function Signup() {
         } catch (error) {
             seterror(error.message)
         }
+        finally {
+            setLoading(false)
+        }
     }
 
     return (
         <div className="flex items-center justify-center mt-[2vw] mb-[2vw]">
-            <div className={`mx-auto w-full max-w-lg bg-blue-300 rounded-xl p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg glass rounded-xl p-10 border border-black/10`}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
                         <Logo width="100%" />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>
-                <p className="mt-2 text-center text-base text-black/60">
+                <p className="mt-2 text-center text-base text-white/80">
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
@@ -75,9 +81,13 @@ function Signup() {
                                 required: true,
                             })}
                         />
-                        <Button type="submit" className="w-full">
-                            Create Account
-                        </Button>
+                        {loading ?
+                            <div className='w-full grid place-items-center'> <Loader></Loader></div>
+                            :
+                            <Button
+                                type="submit"
+                                className=" my-4 py-2 px-5 w-full text-black font-semibold button-custom rounded-xl shadow-lg   hover:cursor-pointer"
+                            >Sign in</Button>}
                     </div>
                 </form>
             </div>

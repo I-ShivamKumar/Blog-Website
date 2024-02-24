@@ -13,6 +13,7 @@ import Signup from "./Signup";
 import Login from "./Login";
 import PostForm from "./post-form/PostForm";
 import ProfileComponent from "./ProfileComponent";
+import Loader from "./Loader";
 
 export {
     Container,
@@ -23,6 +24,7 @@ export {
     AuthLayout,
     Button,
     Input,
+    Loader,
     Login,
     Logo,
     PostCard,
