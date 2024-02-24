@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 function ProfileComponent() {
     const userData = useSelector((state) => state.auth.userData);
 
-    useEffect(() => { }, [])
     console.log(userData);
     return (
         <div className='my-10'>

@@ -3,9 +3,11 @@ import appwriteService from "../appwrite/config";
 import { Container, PostCard } from '../components'
 import notebook from "../assets/notebook.webp"
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Home() {
     const [posts, setPosts] = useState([])
+    const authStatus = useSelector((state) => state.auth.status)
 
 
     // useEffect(() => {
@@ -30,24 +32,14 @@ function Home() {
                             <p className=' text-md lg:text-[.9vw]'>
                                 Your hub for interesting reads, insights, and more. Start your journey into the world of our blog app. Happy reading!
                             </p>
-                            <Link to="/">
+                            <Link to={authStatus ? "/all-posts" : "/login"}>
                                 <button
-                                    className="overflow-hidden relative w-32 p-2 h-12 bg-purple-700 text-white border-none rounded-md text-xl font-bold cursor-pointer z-10 group mt-[3vw]"
+                                    className="relative my-[5vw] py-2 px-8 text-black text-base font-bold nded-full overflow-hidden bg-white rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0"
                                 >
-                                    {`Hover me!`}
-                                    <span
-                                        className="absolute w-36 h-32 -top-8 -left-2 bg-sky-200 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-right"
-                                    ></span>
-                                    <span
-                                        className="absolute w-36 h-32 -top-8 -left-2 bg-sky-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-right"
-                                    ></span>
-                                    <span
-                                        className="absolute w-36 h-32 -top-8 -left-2 bg-sky-600 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-1000 duration-500 origin-right"
-                                    ></span>
-                                    <span
-                                        className="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10"
-                                    >{`Hover me!`}</span>
+                                    {authStatus ? "See All Posts!" : "Get Started!"}
+
                                 </button>
+
                             </Link>
                         </div>
                         <div className='flex justify-center items-center sm:w-full md:w-full lg:w-1/2 lg:px-4 sm:px-[3vh]'>
