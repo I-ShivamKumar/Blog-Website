@@ -45,11 +45,9 @@ function Home() {
                         <div className='flex justify-center items-center sm:w-full md:w-full lg:w-1/2 lg:px-4 sm:px-[3vh]'>
                             <img className='w-[30vh] border-blue-300 border mt-10 lg:w-[25vw] lg:mt-0 rounded-lg' src={notebook} alt="" />
                         </div>
-
-
-
                     </div>
                 </div>
+                
             </Container>
         </div>
     )

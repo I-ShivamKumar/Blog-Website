@@ -5,7 +5,6 @@ import authService from "./appwrite/auth"
 import { login, logout } from "./store/authSlice"
 import { Footer, Header } from './components'
 import { Outlet } from 'react-router-dom'
-import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
 
@@ -27,7 +26,6 @@ function App() {
         <div className='w-full block'>
           <Header />
           <main>
-            <SpeedInsights />
             <Outlet />
           </main>
           <Footer />
