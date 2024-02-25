@@ -27,9 +27,9 @@ function Home() {
                     <div className='flex flex-col sm:flex-col md:flex-row'>
                         <div className='sm:w-full md:w-full lg:w-1/2 px-8 justify-center items-center'>
                             <h2 className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8 ">
-                                Welcome to the BlogApp!
+                                Welcome to MyBlog!
                             </h2>
-                            <p className=' text-md lg:text-[.9vw]'>
+                            <p className=' text-md lg:text-[1vw]'>
                                 Your hub for interesting reads, insights, and more. Start your journey into the world of our blog app. Happy reading!
                             </p>
                             <Link to={authStatus ? "/all-posts" : "/login"}>
