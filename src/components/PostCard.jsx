@@ -9,11 +9,9 @@ function PostCard({ $id, title, featuredImage }) {
             <div className='w-full border border-gray-500 hover:bg-[#4b4957] duration-200 rounded-xl p-2'>
 
                 <div className='w-full justify-center mb-4'>
-                    <img className='rounded-xl' src={appwriteService.getFilepreview(featuredImage)} alt={title} />
+                    <img className='rounded-xl h-full object-cover' src={appwriteService.getFilepreview(featuredImage)} alt={title}  />
                 </div>
                 <h2 className='text-xl p-2 font-bold text-white'>{title}</h2>
-
-
             </div>
         </Link>
     )
