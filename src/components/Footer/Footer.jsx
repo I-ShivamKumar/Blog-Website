@@ -25,7 +25,7 @@ function Footer() {
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
                             <button
-                                onClick={() => { navigate("https://github.com/shk-ubd") }}
+                                onClick={() => { navigate("https://github.com/I-ShivamKumar") }}
                                 className=" w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
                             >
                                 <svg
@@ -51,7 +51,7 @@ function Footer() {
                     <div className="w-full p-6 md:w-1/2 lg:w-2/12">
                         <div className="h-full">
                             <button
-                                onClick={() => { navigate("https://www.linkedin.com/in/sheikh-ubaid/") }}
+                                onClick={() => { navigate("https://www.linkedin.com/in/shivam-kumar-b75774223/") }}
                                 className="w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
                             >
                                 <svg
@@ -67,7 +67,7 @@ function Footer() {
                     <div className="w-full p-6 md:w-1/2 lg:w-3/12">
                         <div className="h-full">
                             <button
-                                onClick={() => { navigate("https://www.linkedin.com/in/sheikh-ubaid/") }}
+                                onClick={() => { navigate("https://twitter.com/IshivamKumar03") }}
                                 className="w-40 group flex justify-center items-center gap-2 group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:border-neutral-900 duration-500 hover:duration-500 underline underline-offset-2 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-neutral-300 relative bg-neutral-900 px-4 py-4 border text-left text-gray-50 text-base font-bold rounded-lg overflow-hidden after:absolute after:z-10 after:w-12 after:h-12 after:content[''] after:bg-sky-900 after:-left-8 after:top-8 after:rounded-full after:blur-lg hover:after:animate-pulse"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="30" viewBox="0 0 48 48">
