@@ -5,7 +5,7 @@ import logo from '../assets/logo.png'
 
 function Logo({ width = '100px' }) {
     return (
-        <img src={logo} width={width}alt="LOGO" />
+        <img src={logo} width={width} alt="LOGO" />
     )
 }
 

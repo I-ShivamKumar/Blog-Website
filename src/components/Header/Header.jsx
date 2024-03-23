@@ -61,7 +61,7 @@ function Header() {
                 <nav className='flex justify-between flex-wrap items-center'>
 
                     <div className="">
-                        <Link to="/" onClick={closeNavbar}> <Logo width='70px' /> </Link>
+                        <Link to="/" onClick={closeNavbar}> <Logo width='100px' /> </Link>
                     </div>
 
                     <div className='md:hidden mr-4'>

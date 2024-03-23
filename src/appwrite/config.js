@@ -96,21 +96,21 @@ export class Service {
 
     //File upload Services
 
-    async uploadFile(file){
+    async uploadFile(file) {
         try {
             return await this.bucket.createFile(
                 conf.appwriteBucketId,
                 ID.unique(),
                 file,
             )
-            
+
         } catch (error) {
             console.log("appwrite service :: uploadFile :: error", error);
             return false
         }
     }
 
-    async deleteFile(fileId){
+    async deleteFile(fileId) {
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId,
@@ -124,12 +124,14 @@ export class Service {
     }
 
 
-    getFilepreview(fileId){
+    getFilepreview(fileId) {
         try {
-            return this.bucket.getFilePreview(
+            const res =  this.bucket.getFilePreview(
                 conf.appwriteBucketId,
                 fileId,
             )
+            // console.log("appwrite service :: getFilepreview :: res", res);
+            return res;
         } catch (error) {
             console.log("appwrite service :: getFilepreview :: error", error);
             return false

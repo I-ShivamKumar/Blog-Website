@@ -29,7 +29,7 @@ export default function PostForm({ post }) {
                 const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
                 if (file) {
-                    appwriteService.deleteFile(post.featuredImage);                
+                    appwriteService.deleteFile(post.featuredImage);
                 }
 
                 const dbPost = await appwriteService.updatePost(post.$id, {
@@ -45,7 +45,12 @@ export default function PostForm({ post }) {
 
                 if (file) {
                     const fileId = file.$id;
-                    data.featuredImage = fileId;
+                    if (fileId) {
+                        data.featuredImage = fileId;
+                    }
+                    else {
+                        console.log("Error in uploading file");
+                    }
                     const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
 
                     if (dbPost) {
@@ -54,7 +59,7 @@ export default function PostForm({ post }) {
                 }
             }
         }
-        
+
         finally {
             setLoading(false)
         }
