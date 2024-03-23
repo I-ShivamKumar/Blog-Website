@@ -33,11 +33,11 @@ function Signup() {
     }
 
     return (
-        <div className="flex items-center justify-center mt-[2vw] mb-[2vw]">
+        <div className="flex items-center justify-center w-11/12 mx-auto mt-[2vw] mb-[2vw]">
             <div className={`mx-auto w-full max-w-lg glass rounded-xl p-10 border border-black/10`}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                        <Logo width="100%" className='mx-auto' />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign up to create account</h2>

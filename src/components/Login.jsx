@@ -44,12 +44,12 @@ function Login() {
     }
 
     return (
-        <div className='flex items-center justify-center w-full mt-[5vw] mb-[5vw]'>
+        <div className='flex items-center justify-center w-11/12 mt-[5vw] mb-[5vw] mx-auto'>
 
             <div className={`mx-auto w-full max-w-lg glass rounded-xl p-10 border `}>
                 <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%" />
+                        <Logo width="100%" className='mx-auto' />
                     </span>
                 </div>
                 <h2 className="text-center text-2xl font-bold leading-tight">Sign in to your account</h2>
