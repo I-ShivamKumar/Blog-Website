@@ -126,11 +126,11 @@ export class Service {
 
     getFilepreview(fileId) {
         try {
-            const res =  this.bucket.getFilePreview(
+            const res = this.bucket.getFileView(
                 conf.appwriteBucketId,
                 fileId,
             )
-            // console.log("appwrite service :: getFilepreview :: res", res);
+            console.log("appwrite service :: getFilepreview :: res", res);
             return res;
         } catch (error) {
             console.log("appwrite service :: getFilepreview :: error", error);
